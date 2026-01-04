@@ -2,6 +2,8 @@ import { useContext } from "react";
 import UserContext from "../utils/UserContext";
 
 const RestaurantCategory = ({ title, items = [], showItems, setShowIndex }) => {
+  useContext(UserContext);
+
   return (
     <div className="my-5 border border-gray-200 rounded-xl bg-white shadow-sm overflow-hidden">
       
@@ -52,15 +54,21 @@ const RestaurantCategory = ({ title, items = [], showItems, setShowIndex }) => {
                       {item.name}
                     </h3>
 
-                    {/* Custom Green Dot Rating */}
+                    {/* ⭐ PERFECT GREEN DOT RATING */}
                     {item.avgRating && (
                       <span className="flex items-center gap-1 text-sm font-semibold text-gray-800 whitespace-nowrap">
-                        <span className="relative inline-flex items-center justify-center w-5 h-5">
+                        <span className="relative inline-flex w-5 h-5">
                           <span className="absolute inset-0 bg-green-600 rounded-full"></span>
-                          <span className="relative text-white text-xs font-bold leading-none">
-                            ★
-                          </span>
+
+                          <svg
+                            viewBox="0 0 24 24"
+                            className="absolute inset-0 m-auto w-3 h-3 text-white"
+                            fill="currentColor"
+                          >
+                            <path d="M12 17.3l-6.18 3.7 1.64-7.03L2 9.24l7.19-.61L12 2l2.81 6.63L22 9.24l-5.46 4.73 1.64 7.03z" />
+                          </svg>
                         </span>
+
                         {item.avgRating}
                       </span>
                     )}

@@ -2,7 +2,7 @@ import { useContext } from "react";
 import UserContext from "../utils/UserContext";
 
 const RestaurantCard = ({ resData }) => {
-  useContext(UserContext); // context kept, not displayed
+  useContext(UserContext);
 
   const {
     name,
@@ -28,12 +28,12 @@ const RestaurantCard = ({ resData }) => {
           src={image}
         />
 
-        {/* Subtle gradient (bottom → top) */}
+        {/* Gradient */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent"></div>
 
-        {/* Offer Text */}
+        {/* Offer */}
         {offerText && (
-          <span className="absolute bottom-2 left-2 z-10 text-[#F8F6F2] font-extrabold text-xl md:text-2xl uppercase leading-tight drop-shadow-md">
+          <span className="absolute bottom-2 left-2 z-10 text-[#F8F6F2] font-extrabold text-xl md:text-2xl uppercase drop-shadow-md">
             {offerText}
           </span>
         )}
@@ -41,7 +41,6 @@ const RestaurantCard = ({ resData }) => {
 
       {/* Content */}
       <div className="p-4">
-        {/* Name */}
         <h3 className="font-bold text-lg truncate">
           {name || "Restaurant"}
         </h3>
@@ -49,12 +48,23 @@ const RestaurantCard = ({ resData }) => {
         {/* Rating & Time */}
         <div className="flex items-center gap-2 mt-1 text-sm font-semibold text-gray-800">
           <span className="flex items-center gap-1">
-            <span className="relative inline-flex items-center justify-center w-5 h-5">
+
+            {/* ⭐ PERFECT RATING BADGE */}
+            <span className="relative inline-flex w-5 h-5">
               <span className="absolute inset-0 bg-green-600 rounded-full"></span>
-              <span className="relative text-white text-xs font-bold">★</span>
+
+              <svg
+                viewBox="0 0 24 24"
+                className="absolute inset-0 m-auto w-3 h-3 text-white"
+                fill="currentColor"
+              >
+                <path d="M12 17.3l-6.18 3.7 1.64-7.03L2 9.24l7.19-.61L12 2l2.81 6.63L22 9.24l-5.46 4.73 1.64 7.03z" />
+              </svg>
             </span>
+
             {avgRating || "N/A"}
           </span>
+
           <span>• {deliveryTime || "N/A"} mins</span>
         </div>
 
@@ -63,9 +73,9 @@ const RestaurantCard = ({ resData }) => {
           {Array.isArray(cuisines) ? cuisines.join(", ") : "Various Cuisines"}
         </p>
 
-        {/* Location (improved) */}
+        {/* Location */}
         {location && (
-          <p className="flex items-center gap-1 text-sm text-gray-600 truncate mt-1">
+          <p className="text-sm text-gray-600 truncate mt-1">
             {location}
           </p>
         )}
@@ -74,19 +84,18 @@ const RestaurantCard = ({ resData }) => {
   );
 };
 
-/* 🔥 Promoted HOC (improved UI) */
+/* 🔥 Promoted HOC */
 export const withPromotedLabel = (RestaurantCard) => {
   return (props) => (
     <div className="relative">
       <span
         className="
           absolute top-2 left-2 z-10
-          bg-yellow-400/50
+          bg-yellow-400/60
           text-black
           text-[10px] font-semibold uppercase
           px-2 py-0.5
           rounded-md
-          shadow-sm
         "
       >
         Promoted

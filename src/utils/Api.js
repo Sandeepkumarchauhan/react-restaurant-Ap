@@ -392,12 +392,30 @@ const restaurants = [
   avgRating: 4.5,
   deliveryTime: 34,
   offer: "15% off",
+  location:"Shadhara",
   price: "₹950",
-  image: "https://picsum.photos/200/150?random=11",
+  image: "https://images.unsplash.com/photo-1532636875304-0c89119d9b4d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8a2ViYWIlMjBraW5nZG9tfGVufDB8fDB8fHww",
   menu: {
-    Recommended: [{ name: "Chicken Seekh Kebab", price: "₹320", avgRating: 4.6 }],
-    Drinks: [{ name: "Mint Cooler", price: "₹140", avgRating: 4.4 }],
-    "Our Special": [{ name: "Kebab Platter", price: "₹520", avgRating: 4.7 }]
+    Recommended: [{ name: "Chicken Seekh Kebab", price: "₹320", avgRating: 4.6,
+      image:"https://images.unsplash.com/photo-1740591872073-e0e627756b90?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hpY2tlbiUyMHNlZWtoJTIwa2ViYWJ8ZW58MHx8MHx8fDA%3D"
+    },
+    { name: " Seekh Kebab", price: "₹220", avgRating: 4.6,
+      image:"https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2Vla2glMjBrZWJhYnxlbnwwfHwwfHx8MA%3D%3D"
+    },
+    { name: "Galouti Kebab", price: "₹420", avgRating: 4.2,
+      image:"https://images.unsplash.com/photo-1630585577431-03c64600308a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDh8fHNlZWtoJTIwa2ViYWJ8ZW58MHx8MHx8fDA%3D"
+    }
+    ],
+    Drinks: [{ name: "Mint Cooler", price: "₹140", avgRating: 4.4,
+      image:"https://media.istockphoto.com/id/2225508018/photo/raspberry-mint-lemonade-bright-overhead-composition-with-textured-ice-and-fresh-garnish.webp?a=1&b=1&s=612x612&w=0&k=20&c=Ohf2yjNAoe5Zu59ba7Xop6j5jX3S6rnRHmo716BUB_0="
+    },
+    { name: "Sharbat", price: "₹110", avgRating: 4.4,
+      image:"https://plus.unsplash.com/premium_photo-1722194959719-d36869358d7a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWludCUyMGNvb2xlcnxlbnwwfHwwfHx8MA%3D%3D"
+    }
+    ],
+    "Our Special": [{ name: "Kebab Platter", price: "₹520", avgRating: 4.7,
+      image:"https://images.unsplash.com/photo-1630585577431-03c64600308a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGtlYmFiJTIwcGxhdHRlcnxlbnwwfHwwfHx8MA%3D%3D"
+    }]
   }
 },
 {
@@ -406,13 +424,34 @@ const restaurants = [
   cuisines: ["Cafe", "Snacks"],
   avgRating: 4.3,
   deliveryTime: 22,
+  location:"DilshadGarden",
   offer: "Buy 1 Get 1",
   price: "₹600",
-  image: "https://picsum.photos/200/150?random=12",
+  image: "https://images.unsplash.com/photo-1619860860774-1e2e17343432?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2FuZHdpdGNofGVufDB8fDB8fHww",
   menu: {
-    Recommended: [{ name: "Veg Sandwich", price: "₹160", avgRating: 4.3 }],
-    Drinks: [{ name: "Cold Coffee", price: "₹180", avgRating: 4.5 }],
-    "Our Special": [{ name: "Cheese Loaded Fries", price: "₹260", avgRating: 4.6 }]
+    Recommended: [{ name: "Veg Sandwich", price: "₹160", avgRating: 4.3,
+      image:"https://images.unsplash.com/photo-1540713434306-58505cf1b6fc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c2FuZHdpdGNofGVufDB8fDB8fHww"
+    },
+    { name: "Griled Sandwich", price: "₹260", avgRating: 4.3,
+      image:"https://images.unsplash.com/photo-1475090169767-40ed8d18f67d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3JpbGxlZCUyMHNhbmR3aWNofGVufDB8fDB8fHww"
+    },
+    { name: "Cheese Sandwich", price: "₹120", avgRating: 4.3,
+      image:"https://images.unsplash.com/photo-1528736235302-52922df5c122?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Z3JpbGxlZCUyMHNhbmR3aWNofGVufDB8fDB8fHww"
+    }
+    ],
+    Drinks: [{ name: "Cold Coffee", price: "₹180", avgRating: 4.5,
+      image:"https://plus.unsplash.com/premium_photo-1663933534262-5de49eb4f59f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y29sZCUyMGNvZmZlfGVufDB8fDB8fHww"
+    },
+    { name: "Hot choclate", price: "₹710", avgRating: 4.2,
+      image:"https://images.unsplash.com/photo-1557772747-77ffbcf6b117?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG90JTIwY2hvY2xhdGV8ZW58MHx8MHx8fDA%3D"
+    },
+    { name: "Soup", price: "₹280", avgRating: 4.1,
+      image:"https://images.unsplash.com/photo-1665593998976-d957f2827fe7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fHNvdXB8ZW58MHx8MHx8fDA%3D"
+    }
+  ],
+    "Our Special": [{ name: "Cheese Loaded Fries", price: "₹260", avgRating: 4.6,
+      image:"https://media.istockphoto.com/id/1561792099/photo/french-fries-loaded-with-melted-cheddar-cheese-on-white-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=hLOs4TcKDg9xrGrERj_vOqskpmHHeH8ndA92b-e0iIc="
+    }]
   }
 },
 {
@@ -422,10 +461,13 @@ const restaurants = [
   avgRating: 4.2,
   deliveryTime: 21,
   offer: "10% off",
+  location:"PreetVihar",
   price: "₹580",
-  image: "https://picsum.photos/200/150?random=13",
+  image: "https://media.istockphoto.com/id/1400256468/photo/mix-vegetable-kathi-roll.webp?a=1&b=1&s=612x612&w=0&k=20&c=lEAqXmWXQJeaY_1dbah56qRGmRx2EukJ2u-skGVYCZ0=",
   menu: {
-    Recommended: [{ name: "Paneer Roll", price: "₹180", avgRating: 4.3 }],
+    Recommended: [{ name: "Paneer Roll", price: "₹180", avgRating: 4.3,
+      image:"https://media.istockphoto.com/id/1352474720/photo/fresh-paneer-roll-with-fresh-tomatos-salad-cheese-and-onions-isolated-on-bright-blue.webp?a=1&b=1&s=612x612&w=0&k=20&c=HHeBNencFEcT2ZplHH2SJ-5us8L-m8GYHmfMhoMuzaw="
+     }],
     Drinks: [{ name: "Lemon Soda", price: "₹100", avgRating: 4.2 }],
     "Our Special": [{ name: "Loaded Cheese Roll", price: "₹240", avgRating: 4.5 }]
   }
