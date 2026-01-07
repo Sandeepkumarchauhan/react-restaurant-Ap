@@ -49,7 +49,7 @@ const RestaurantCard = ({ resData }) => {
         <div className="flex items-center gap-2 mt-1 text-sm font-semibold text-gray-800">
           <span className="flex items-center gap-1">
 
-            {/* ⭐ PERFECT RATING BADGE */}
+            {/* ⭐ Avg Rating */}
             <span className="relative inline-flex w-5 h-5">
               <span className="absolute inset-0 bg-green-600 rounded-full"></span>
 

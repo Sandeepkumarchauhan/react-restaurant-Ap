@@ -10,6 +10,7 @@ const Body = () => {
   const [listOfRestaurants, setListOfRestaurant] = useState([]);
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
   const [searchText, setSearchText] = useState("");
+  const [showShimmer, setShowShimmer] = useState(true);
 
   const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
 
@@ -17,34 +18,34 @@ const Body = () => {
   const { loggedInUser, setUserName } = useContext(UserContext);
 
   useEffect(() => {
-    setListOfRestaurant(restaurants);
-    setFilteredRestaurant(restaurants);
+    setTimeout(() => {
+      setListOfRestaurant(restaurants);
+      setFilteredRestaurant(restaurants);
+      setShowShimmer(false);
+    }, 1500); // shimmer delay
   }, []);
 
   if (!onlineStatus) {
-  return (
-    <div className="flex min-h-screen items-center justify-center bg-gray-50">
-      <div className="rounded-xl bg-white p-6 shadow-md">
-        <h1 className="text-xl font-semibold text-gray-700">
-          Looks like you're offline 😕
-        </h1>
-        <p className="mt-2 text-sm text-gray-500">
-          Please check your internet connection.
-        </p>
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-gray-50">
+        <div className="rounded-xl bg-white p-6 shadow-md">
+          <h1 className="text-xl font-semibold text-gray-700">
+            Looks like you're offline 😕
+          </h1>
+          <p className="mt-2 text-sm text-gray-500">
+            Please check your internet connection.
+          </p>
+        </div>
       </div>
-    </div>
-  );
-}
+    );
+  }
 
-
-  if (listOfRestaurants.length === 0) return <Shimmer />;
+  if (showShimmer) return <Shimmer />;
 
   return (
     <div className="pt-28 px-4 max-w-7xl mx-auto">
-
       {/* 🔍 Filters */}
       <div className="flex flex-wrap items-center gap-4 mb-6">
-
         {/* Search */}
         <div className="flex gap-2">
           <input
@@ -68,17 +69,18 @@ const Body = () => {
           </button>
         </div>
 
-        {/* Top Rated */}
+        {/* ⭐ Top Rated */}
         <button
-          className="px-4 py-2 bg-gray-200 rounded-md"
+          className="px-5 py-2 rounded-full bg-gray-100 text-gray-800 text-sm font-semibold
+          hover:bg-gray-200 hover:shadow-sm transition-all duration-200"
           onClick={() => {
             const filteredList = listOfRestaurants.filter(
-              (res) => Number(res.avgRating) && Number(res.avgRating) > 4
+              (res) => Number(res.avgRating) && Number(res.avgRating) > 4.5
             );
             setFilteredRestaurant(filteredList);
           }}
         >
-          Top Rated Restaurants
+          ⭐ Top Rated Restaurants
         </button>
 
         {/* Username */}

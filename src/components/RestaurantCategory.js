@@ -54,7 +54,7 @@ const RestaurantCategory = ({ title, items = [], showItems, setShowIndex }) => {
                       {item.name}
                     </h3>
 
-                    {/* ⭐ PERFECT GREEN DOT RATING */}
+                    {/* ⭐ Avg Rating  */}
                     {item.avgRating && (
                       <span className="flex items-center gap-1 text-sm font-semibold text-gray-800 whitespace-nowrap">
                         <span className="relative inline-flex w-5 h-5">

@@ -42,7 +42,7 @@ const RestaurantMenu = () => {
             <span>{cuisines.join(", ")}</span>
             <span>| {price}</span>
 
-            {/* ⭐ PERFECT GREEN DOT RATING */}
+            {/* ⭐ Avg Rating*/}
             <span className="flex items-center gap-1">
               <span className="relative inline-flex w-5 h-5">
                 <span className="absolute inset-0 bg-green-600 rounded-full"></span>
