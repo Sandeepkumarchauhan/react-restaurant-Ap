@@ -44,6 +44,19 @@ const RestaurantCategory = ({ title, items = [], showItems, setShowIndex }) => {
                         {item.offer}
                       </span>
                     )}
+
+                    {/* Add button */}
+                    <button 
+                    className ="absolute top-2 right-2 w-20 h-7
+                                bg-black text-white text-sm font-semibold
+                              rounded shadow flex items-center justify-center
+                            hover:bg-gray-900"
+
+                    onClick={() => console.log("Add item:", item.name)}
+                    >
+                      Add  +
+                    </button>
+
                   </div>
                 )}
 
